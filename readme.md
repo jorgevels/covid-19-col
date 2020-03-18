@@ -1,6 +1,6 @@
 # COVID-19 COLOMBIA
 
-Ejercicio realizado para mostrar un mapa actualizado de las personas afectadas por el coronavirus a nivel mundial, usando herramientas como:
+Proyecto realizado para mostrar un mapa actualizado de las personas afectadas por el coronavirus en Colombia, usando herramientas como:
 
 - Leaflet
 - Leaflet FullScreen
@@ -12,7 +12,7 @@ Puedes verlo [aquí](https://corona-sm-2019-app.netlify.com) o seguir la guía s
 
 ### ¿Como Utilizarlo?
 
-Puedes bajarte el proyecto y ejecutarlo en un servidor web, si tienes NodeJS puedes instalar el paquete **live-server** y ejecutar el comando
+Puedes descargar el proyecto y ejecutarlo en un servidor web, si tienes NodeJS puedes instalar el paquete **live-server** y ejecutar el comando
 
 ```cmd
 live-server
@@ -21,9 +21,8 @@ live-server
 ### Imágenes
 
 **Versión Móvil**
-![Móvil](./capturaMovil.png)
 
-**Versión Web**
+![Móvil](./capturaMovil.png)
 
 ### Creditos
 
@@ -35,5 +34,5 @@ Este proyecto fue desarrollado en inspiracion en un video del canal de **Leonida
 
 ## Autor
 
-> Jorge Velasquez - Development
+> Jorge Velasquez - Frontend Development
 > Creditos a Stalin Maza - Desarrollador Web que publico un link del proyecto que realizo utilizando la libreia Leaflet con la cual nunca habia trabajado y me sirvio su proyecto para tenerlo como referencia y aprender de esta libreria.
