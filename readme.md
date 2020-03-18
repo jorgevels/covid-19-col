@@ -1,0 +1,39 @@
+# COVID-19 COLOMBIA
+
+Ejercicio realizado para mostrar un mapa actualizado de las personas afectadas por el coronavirus a nivel mundial, usando herramientas como:
+
+- Leaflet
+- Leaflet FullScreen
+- Leaflet Edgebuffer
+
+### Como Probarlo
+
+Puedes verlo [aquí](https://corona-sm-2019-app.netlify.com) o seguir la guía sobre **Como Utilizarlo**
+
+### ¿Como Utilizarlo?
+
+Puedes bajarte el proyecto y ejecutarlo en un servidor web, si tienes NodeJS puedes instalar el paquete **live-server** y ejecutar el comando
+
+```cmd
+live-server
+```
+
+### Imágenes
+
+**Versión Móvil**
+![Móvil](./capturaMovil.png)
+
+**Versión Web**
+
+### Creditos
+
+Este proyecto fue desarrollado en inspiracion en un video del canal de **Leonidas Esteban** en el cual implemento la API Key de google maps.
+
+- Pueden ver la clase original [aquí](https://www.youtube.com/watch?v=UlfacaW8634)
+
+- Buscando otras alternativas ya que libreria de google maps dejo de ser gratuita me guie con el proyecto de Stalin Maza.
+
+## Autor
+
+> Jorge Velasquez - Development
+> Creditos a Stalin Maza - Desarrollador Web que publico un link del proyecto que realizo utilizando la libreia Leaflet con la cual nunca habia trabajado y me sirvio su proyecto para tenerlo como referencia y aprender de esta libreria.
