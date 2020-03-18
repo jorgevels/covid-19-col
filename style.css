@@ -80,6 +80,20 @@ body {
 /* createCorner("top", "center"), in leaflet.src */
 /* createCorner("bottom", "center") */
 
+@media (max-width: 1024px) {
+  .leaflet-center {
+    left: 34%;
+    transform: translate(-50%, 0%);
+    margin: 0.1em;
+  }
+
+  .leaflet-center .boton {
+    left: 50vw;
+    top: 620px;
+    transform: translate(-50%, 0%);
+    margin: 0.1em;
+  }
+}
 @media (max-width: 600px) {
   /* .boton {
     display: flex;
