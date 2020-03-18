@@ -22,7 +22,7 @@ live-server
 
 **Versión Móvil**
 
-![Móvil](./capturaMovil.png)
+![Móvil](./assets/images/capturaMovil.png)
 
 ### Creditos
 
