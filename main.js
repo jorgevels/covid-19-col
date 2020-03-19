@@ -87,11 +87,21 @@ info.onAdd = function(map) {
   return this._div;
 };
 
+/* function renderExtraData2({
+  confirmed,
+  deaths,
+  recovered,
+  provincestate,
+  countryregion
+})  */
+
 // method that we will use to update the control based on feature properties passed
 info.update = function(props) {
-  this._div.innerHTML = `<h2>Total confirmados 93</h2>
+  this._div.innerHTML = `<h2>Total confirmados 108</h2>
   <h3>Total Muertes 0</h3>
   <h4>Total Recuperados 1</h4>
+  
+  
   
   `;
 };
