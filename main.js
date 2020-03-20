@@ -59,45 +59,57 @@ async function getData() {
   const response = await fetch(
     /*    "https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest" */
     "https://api-covi-19.jorgevelasquez006.now.sh/API/db.json"
+    /* "https://erianvc.github.io/API/COVID-Peru/data/worldCases.json" */
   );
   const data = await response.json();
+  console.log(data.totaldeaths);
   return data;
 }
+
 function renderExtraData({
   confirmed,
   deaths,
   recovered,
   provincestate,
-  countryregion
+  countryregion,
+
+  totalconfirmed,
+  totaldeaths,
+  totalrecovered
 }) {
+  console.log(totalconfirmed);
   return `
+  
         <div>
           <p> <strong>${provincestate} - ${countryregion}</strong> </p>
           <p> Confirmados: <strong><span style="color:#cc6600">${confirmed}</span> </strong></p>
           <p> Muertes: <strong><span style="color:black">${deaths}</span> </strong> </p>
           <p> Recuperados: <strong><span style="color:#008000">${recovered}</span> </strong> </p>
         </div>
+       
       `;
 }
+
+/* <div>
+          
+          <p> Confirmados: <strong><span style="color:#cc6600">${countryregion}</span> </strong></p>
+          <p> Muertes: <strong><span style="color:black">${totalconfirmed}</span> </strong> </p>
+          <p> Recuperados: <strong><span style="color:#008000"></span> </strong> </p>
+        </div> */
+
 //Añador Titulo
 var info = L.control({ position: "bottomcenter" });
-info.onAdd = function(map) {
+
+info.onAdd = function() {
   this._div = L.DomUtil.create("div", "info"); // create a div with a class "info"
   this.update();
   return this._div;
 };
 
-/* function renderExtraData2({
-  confirmed,
-  deaths,
-  recovered,
-  provincestate,
-  countryregion
-})  */
-
 // method that we will use to update the control based on feature properties passed
-info.update = function(props) {
-  this._div.innerHTML = `<h2>Total confirmados 108</h2>
+
+info.update = function(totalconfirmed, totaldeaths, totalrecovered) {
+  this._div.innerHTML = `<h2>Total confirmados 128</h2>
   <h3>Total Muertes 0</h3>
   <h4>Total Recuperados 1</h4>
   
@@ -123,28 +135,23 @@ boton.update = function(props) {
 boton.addTo(map);
 info.addTo(map);
 
-//Añadir Marcadores
-/* const iconUrl = "./icon.png"; */
 const iconUrl = "./favicon.ico";
-const shadowIcon = "./marker-shadow.png";
 const icon = new L.Icon({
   iconUrl: iconUrl,
-  shadowUrl: shadowIcon,
   shadowSize: [20, 20],
   iconSize: [25, 25]
-  /* iconAnchor: [12, 41] */
-  /*  popupAnchor: [1, -34] */
 });
 
 async function renderData() {
   const data = await getData();
-  let markersGroup = [];
-  data.forEach((item, index) => {
-    const marker = L.marker([item.location.lat, item.location.lng], {
+  /* let markersGroup = []; */
+
+  data.details.forEach(the => {
+    L.marker([the.location.lat, the.location.lng], {
       icon: icon
     })
       // .addTo(map)
-      .bindPopup(renderExtraData(item))
+      .bindPopup(renderExtraData(the))
       .addTo(markersGroupLayer);
   });
 
